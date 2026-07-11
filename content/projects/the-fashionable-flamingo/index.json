@@ -1,0 +1,22 @@
+{
+  "title": "The Fashionable Flamingo",
+  "description": "Elevating retail spaces with the quirky elegance of a fashionable flamingo.",
+  "category": "COMMERCIAL",
+  "workType": "SOLO",
+  "status": "completed",
+  "location": "Karaikudi, India",
+  "completedAt": "2026-06-21",
+  "coverImage": "https://res.cloudinary.com/qzkrzwx5/image/upload/f_auto,q_auto/1000036599_f4x29l",
+  "isFeatured": true,
+  "isPublished": true,
+  "media": [
+    {
+      "type": "image",
+      "url": "https://res.cloudinary.com/qzkrzwx5/image/upload/f_auto,q_auto/1000036599_f4x29l",
+      "alt": "Full View of the Art"
+    }
+  ],
+  "teamMembers": [
+    "sujitha-charlin"
+  ]
+}
