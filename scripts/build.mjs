@@ -3,7 +3,7 @@ import { execSync } from "child_process";
 import path from "path";
 
 const apiPath = path.join(process.cwd(), "src", "app", "api");
-const tempPath = path.join(process.cwd(), "src", "app", ".api-temp");
+const tempPath = path.join(process.cwd(), ".api-temp");
 
 try {
   if (fs.existsSync(apiPath)) {
