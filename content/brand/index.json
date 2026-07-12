@@ -2,7 +2,12 @@
   "brandName": "HueBees Art",
   "tagline": "Murals and paintings that turn walls into stories.",
   "email": "huebees2026@gmail.com",
-  "instagram": "https://www.instagram.com/hue_bees_wallmurals?igsh=MXBiODFvdDlhMTB3dQ==",
+  "instagram": "https://www.instagram.com/huebees__art?igsh=MXBiODFvdDlhMTB3dQ==",
   "whatsapp": "https://wa.me/919999999999",
-  "commonGallery": []
+  "commonGallery": [
+    {
+      "type": "instagram-gallery",
+      "url": "https://www.instagram.com/huebees__art?igsh=MXBiODFvdDlhMTB3dQ=="
+    }
+  ]
 }
