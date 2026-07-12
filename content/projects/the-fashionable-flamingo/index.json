@@ -14,6 +14,14 @@
       "type": "image",
       "url": "https://res.cloudinary.com/qzkrzwx5/image/upload/v1783822892/IMG-20260621-WA0005_utuusm.jpg",
       "alt": "Full View of the Art"
+    },
+    {
+      "type": "instagram",
+      "url": "https://www.instagram.com/p/DaH-r_bDwkp/?igsh=OTR1MXVwemhkcDIw"
+    },
+    {
+      "type": "instagram-reel",
+      "url": "https://www.instagram.com/reel/DZ420n1P80z/?igsh=dGExeXpneWp2Ymxw"
     }
   ],
   "teamMembers": [
