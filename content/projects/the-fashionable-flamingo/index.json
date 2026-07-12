@@ -6,13 +6,13 @@
   "status": "completed",
   "location": "Karaikudi, India",
   "completedAt": "2026-06-21",
-  "coverImage": "https://res.cloudinary.com/qzkrzwx5/image/upload/f_auto,q_auto/1000036599_f4x29l",
+  "coverImage": "https://res.cloudinary.com/qzkrzwx5/image/upload/v1783822892/IMG-20260621-WA0005_utuusm.jpg",
   "isFeatured": true,
   "isPublished": true,
   "media": [
     {
       "type": "image",
-      "url": "https://res.cloudinary.com/qzkrzwx5/image/upload/f_auto,q_auto/1000036599_f4x29l",
+      "url": "https://res.cloudinary.com/qzkrzwx5/image/upload/v1783822892/IMG-20260621-WA0005_utuusm.jpg",
       "alt": "Full View of the Art"
     }
   ],
