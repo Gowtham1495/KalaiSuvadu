@@ -1,11 +1,9 @@
 import type { NextConfig } from "next";
 
-const isGithubPages = process.env.GITHUB_ACTIONS === "true";
-
 const nextConfig: NextConfig = {
-  output: process.env.NODE_ENV === "production" ? "export" : undefined,
-  basePath: isGithubPages ? "/KalaiSuvadu" : "",
-  assetPrefix: isGithubPages ? "/KalaiSuvadu/" : "",
+  output: "export",
+  trailingSlash: true,
+  assetPrefix: "./",
   images: {
     unoptimized: true,
   },

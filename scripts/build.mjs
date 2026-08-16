@@ -10,12 +10,13 @@ try {
     console.log("Temporarily hiding src/app/api during static build...");
     fs.renameSync(apiPath, tempPath);
   }
-  
-  // Run the Next.js build
-  execSync("next build", { stdio: "inherit" });
-  
+
+  execSync("next build", {
+    stdio: "inherit",
+    env: { ...process.env, NODE_ENV: "production" },
+  });
+
 } finally {
-  // Always restore the directory, even if the build fails
   if (fs.existsSync(tempPath)) {
     console.log("Restoring src/app/api...");
     fs.renameSync(tempPath, apiPath);
