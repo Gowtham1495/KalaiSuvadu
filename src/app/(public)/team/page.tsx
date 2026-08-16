@@ -4,17 +4,17 @@ import { SectionHeading } from "@/components/public/section-heading";
 import { TeamCard } from "@/components/public/team-card";
 
 export const metadata: Metadata = {
-  title: "Team",
-  description: "Meet the artists who create the HueBees murals and paintings.",
+  title: "About us",
+  description: "Meet the artists who create the KalaiSuvadu murals and paintings.",
 };
 
 export default async function TeamPage() {
   const teamMembers = await getAllTeamMembers();
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+    <div className="mx-auto max-w-7xl bg-[#f6f2ea] px-6 py-12 text-[#2b241b] lg:px-8 lg:py-16">
       <SectionHeading
-        eyebrow="Team"
+        eyebrow="About us"
         title="Artists and collaborators"
         description="Every artist has a distinct style, and each project shows how those styles can work alone or together."
       />

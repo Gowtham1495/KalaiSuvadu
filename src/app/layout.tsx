@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,12 +12,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+});
+
 export const metadata: Metadata = {
   title: {
-    default: "HueBees",
-    template: "%s | HueBees",
+    default: "KalaiSuvadu",
+    template: "%s | KalaiSuvadu",
   },
-  description: "HueBees wall murals and painting studio.",
+  description: "KalaiSuvadu wall murals and painting studio.",
 };
 
 export default function RootLayout({
@@ -28,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[color:var(--background)] text-[color:var(--foreground)]">
         {children}

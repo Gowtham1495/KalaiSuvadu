@@ -1,4 +1,4 @@
-# HueBees — Static Architecture & Migration Plan
+# KalaiSuvadu — Static Architecture & Migration Plan
 
 ## Context
 - **Business:** Wall mural and art studio website.

@@ -44,7 +44,7 @@ export function PortfolioBrowser({ projects, teamMembers }: PortfolioBrowserProp
 
   return (
     <div>
-      <div className="flex flex-col gap-6 rounded-[2rem] border border-stone-200 bg-white p-6 shadow-[0_24px_80px_-42px_rgba(28,25,23,0.28)] lg:flex-row lg:items-center lg:justify-between">
+      <div className="flex flex-col gap-6 rounded-sm border border-[#ddd4c2] bg-[#fbf8f1] p-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-col gap-4">
           <div className="flex flex-wrap gap-2">
             {categories.map((item) => (
@@ -52,10 +52,10 @@ export function PortfolioBrowser({ projects, teamMembers }: PortfolioBrowserProp
                 key={item}
                 type="button"
                 onClick={() => setCategory(item)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                   category === item
-                    ? "bg-stone-950 text-white"
-                    : "bg-stone-100 text-stone-700 hover:bg-stone-200"
+                    ? "border-[#c9a84c] bg-[rgba(201,168,76,0.10)] text-[#2b241b]"
+                    : "border-[#ddd4c2] bg-transparent text-[#8a7d6b] hover:border-[#cfc3ad] hover:text-[#5b5043]"
                 }`}
               >
                 {item === "ALL" ? "All categories" : item}
@@ -69,10 +69,10 @@ export function PortfolioBrowser({ projects, teamMembers }: PortfolioBrowserProp
                 key={item.value}
                 type="button"
                 onClick={() => setStatus(item.value)}
-                className={`rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
+                className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition ${
                   status === item.value
-                    ? "bg-amber-700 text-white"
-                    : "bg-stone-50 text-stone-600 hover:bg-stone-100 border border-stone-200"
+                    ? "border-[#c9a84c] bg-[rgba(201,168,76,0.10)] text-[#2b241b]"
+                    : "border-[#ddd4c2] bg-transparent text-[#8a7d6b] hover:border-[#cfc3ad] hover:text-[#5b5043]"
                 }`}
               >
                 {item.label}
@@ -81,12 +81,12 @@ export function PortfolioBrowser({ projects, teamMembers }: PortfolioBrowserProp
           </div>
         </div>
 
-        <label className="flex items-center gap-3 text-sm font-medium text-stone-700">
+        <label className="flex items-center gap-3 text-sm font-medium text-[#5b5043]">
           Team member
           <select
             value={member}
             onChange={(event) => setMember(event.target.value)}
-            className="rounded-full border border-stone-200 bg-stone-50 px-4 py-2 outline-none"
+            className="rounded-sm border border-[#ddd4c2] bg-[#ffffff] px-4 py-2 text-[#5b5043] outline-none"
           >
             <option value="ALL">All members</option>
             {teamMembers.map((item) => (
@@ -106,14 +106,14 @@ export function PortfolioBrowser({ projects, teamMembers }: PortfolioBrowserProp
             <Link
               key={project.slug}
               href={`/portfolio/${project.slug}`}
-              className="group relative overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-[0_24px_80px_-42px_rgba(28,25,23,0.28)] transition duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-sm border border-[#ddd4c2] bg-[#ffffff] transition duration-300 hover:border-[#cfc3ad]"
             >
               {project.status && project.status !== "completed" && (
-                <span className="absolute top-4 right-4 z-10 rounded-full bg-amber-700/90 backdrop-blur-sm px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">
+                <span className="absolute right-4 top-4 z-10 rounded-full border border-[#c9a84c]/60 bg-[#fff9ee] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#a07c2e]">
                   {project.status === "in-progress" ? "In Progress" : "Upcoming"}
                 </span>
               )}
-              <div className="aspect-[4/3] overflow-hidden bg-stone-100">
+              <div className="aspect-[4/3] overflow-hidden bg-[#ebe3d5]">
                 {cover ? (
                   project.media[0]?.mediaType === "VIDEO" ? (
                     <video className="h-full w-full object-cover" muted playsInline preload="metadata" src={cover} />
@@ -127,13 +127,13 @@ export function PortfolioBrowser({ projects, teamMembers }: PortfolioBrowserProp
                 ) : null}
               </div>
               <div className="p-6">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-700">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#c9a84c]">
                   <span>{project.category}</span>
-                  <span className="text-stone-300">•</span>
+                  <span className="text-[#9a9488]">•</span>
                   <span>{project.workType}</span>
                 </div>
-                <h3 className="mt-3 text-xl font-semibold text-stone-950">{project.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-stone-600">{project.location ?? "Featured project"}</p>
+                <h3 className="font-display mt-3 text-xl font-light text-[#2b241b]">{project.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[#5b5043]">{project.location ?? "Featured project"}</p>
               </div>
             </Link>
           );

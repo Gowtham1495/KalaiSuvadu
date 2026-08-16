@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffaf3;
-  --foreground: #231b16;
+  --background: #0f0f0f;
+  --foreground: #e0d8cc;
+  --ks-black: #0a0a0a;
+  --ks-surface: #111111;
+  --ks-card: #161616;
+  --ks-border: #2a2a2a;
+  --ks-border-bright: #3a3a3a;
+  --ks-gold: #c9a84c;
+  --ks-gold-dim: #a07c2e;
+  --ks-silver: #c8c8c8;
+  --ks-silver-dim: #888888;
+  --ks-silver-bright: #e8e8e8;
+  --ks-text: #e0d8cc;
+  --ks-text-secondary: #a09888;
+  --ks-muted: #606060;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-display);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -16,6 +30,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
+}
+
+.ks-silver-text {
+  color: var(--ks-silver);
+}
+
+.ks-card-bright {
+  background: #191919;
+  border-color: #2e2e2e;
+}
+
+.team-card:nth-child(even) .avatar-frame {
+  border-color: #9a9488;
+}
+
+.service-card:nth-child(even) .diamond-frame {
+  border-color: #9a9488;
+}
+
+.service-card:nth-child(even) .diamond-icon {
+  color: #9a9488;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.bg-kolam {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23c9a84c' opacity='0.15'/%3E%3Ccircle cx='0' cy='0' r='0.5' fill='%23c9a84c' opacity='0.1'/%3E%3Ccircle cx='40' cy='0' r='0.5' fill='%23c9a84c' opacity='0.1'/%3E%3Ccircle cx='0' cy='40' r='0.5' fill='%23c9a84c' opacity='0.1'/%3E%3Ccircle cx='40' cy='40' r='0.5' fill='%23c9a84c' opacity='0.1'/%3E%3Cline x1='20' y1='0' x2='20' y2='40' stroke='%23c9a84c' stroke-width='0.3' opacity='0.08'/%3E%3Cline x1='0' y1='20' x2='40' y2='20' stroke='%23c9a84c' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
 }
 
 * {

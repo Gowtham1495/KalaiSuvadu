@@ -1,6 +1,6 @@
-# HueBees
+# KalaiSuvadu
 
-HueBees is a Next.js 15 App Router project for an art business website and admin panel.
+KalaiSuvadu is a Next.js 15 App Router project for an art business website and admin panel.
 
 ## Stack
 

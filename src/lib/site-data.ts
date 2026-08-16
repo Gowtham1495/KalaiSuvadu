@@ -33,6 +33,7 @@ export interface Project {
   completedAt: string | null;
   coverMediaUrl: string | null;
   isFeatured: boolean;
+  isCoverProject: boolean;
   isPublished: boolean;
   media: ProjectMedia[];
   teamMembers: Array<{
@@ -104,17 +105,17 @@ export async function getBrand(): Promise<BrandSetting | null> {
     const fileContents = await fs.readFile(brandPath, "utf8");
     const data = JSON.parse(fileContents);
     return {
-      brandName: data.brandName || "HueBees",
+      brandName: data.brandName || "KalaiSuvadu",
       tagline: data.tagline || "",
       email: data.email || null,
       instagramUrl: data.instagram || null,
       whatsappUrl: data.whatsapp || null,
       commonGallery: Array.isArray(data.commonGallery)
         ? data.commonGallery.map((item: any) => ({
-            mediaType: item.type || "image",
-            url: item.url || "",
-            altText: item.alt || null,
-          }))
+          mediaType: item.type || "image",
+          url: item.url || "",
+          altText: item.alt || null,
+        }))
         : [],
     };
   } catch (error) {
@@ -211,6 +212,7 @@ export async function getAllProjects(): Promise<Project[]> {
         completedAt: p.completedAt || null,
         coverMediaUrl: p.coverImage || (mediaList[0]?.url) || null,
         isFeatured: !!p.isFeatured,
+        isCoverProject: !!p.isCoverProject,
         isPublished: true,
         media: mediaList,
         teamMembers: teamList,
@@ -219,6 +221,8 @@ export async function getAllProjects(): Promise<Project[]> {
 
   // Sort: Featured first, then completedAt or default creation date
   return projects.sort((a, b) => {
+    if (a.isCoverProject && !b.isCoverProject) return -1;
+    if (!a.isCoverProject && b.isCoverProject) return 1;
     if (a.isFeatured && !b.isFeatured) return -1;
     if (!a.isFeatured && b.isFeatured) return 1;
     return (b.completedAt || "").localeCompare(a.completedAt || "");

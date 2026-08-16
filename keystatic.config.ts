@@ -10,6 +10,8 @@ export default config({
       slugField: "title",
       path: "content/projects/*/",
       format: { data: "json" },
+      entryLayout: "content",
+      columns: ["title"],
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
         description: fields.text({ label: "Description", multiline: true }),
@@ -44,6 +46,7 @@ export default config({
         completedAt: fields.text({ label: "Completed Date (YYYY-MM-DD)" }),
         coverImage: fields.text({ label: "Cover Image URL (Cloudinary or public folder)" }),
         isFeatured: fields.checkbox({ label: "Is Featured", defaultValue: false }),
+        isCoverProject: fields.checkbox({ label: "Is Cover Project", defaultValue: false }),
         isPublished: fields.checkbox({ label: "Is Published", defaultValue: true }),
         media: fields.array(
           fields.object({
@@ -84,6 +87,8 @@ export default config({
       slugField: "name",
       path: "content/team/*/",
       format: { data: "json" },
+      entryLayout: "content",
+      columns: ["name"],
       schema: {
         name: fields.slug({ name: { label: "Name" } }),
         bio: fields.text({ label: "Bio", multiline: true }),
@@ -98,6 +103,8 @@ export default config({
       slugField: "name",
       path: "content/services/*/",
       format: { data: "json" },
+      entryLayout: "content",
+      columns: ["name"],
       schema: {
         name: fields.slug({ name: { label: "Service Name" } }),
         description: fields.text({ label: "Description", multiline: true }),
