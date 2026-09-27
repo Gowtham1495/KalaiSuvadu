@@ -66,7 +66,7 @@ export default async function ContactPage() {
             )}
           </div>
 
-          <p className="mt-8 text-xs text-[#8a7d6b]">We work across Chennai · Homes &amp; Commercial</p>
+          <p className="mt-8 text-xs text-[#8a7d6b]">We work across Coimbatore · Homes &amp; Commercial</p>
         </div>
       </section>
     </div>

@@ -43,7 +43,7 @@ export default async function HomePage() {
           <div className="relative flex flex-col justify-center">
             <div className="flex items-center gap-3">
               <span className="h-px w-8 bg-[#c9a84c]" />
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#8a7d6b]">Chennai, India</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#8a7d6b]">Coimbatore, India</p>
             </div>
             <p className="font-display mt-6 text-3xl text-[#c9a84c]">கலைச் சுவடு</p>
             <h1 className="font-display mt-3 max-w-xl text-5xl font-light tracking-tight text-[#2b241b] sm:text-6xl">
@@ -72,7 +72,7 @@ export default async function HomePage() {
         {[
           { value: `${allProjects.length}+`, label: "Walls transformed" },
           { value: "3", label: "Art styles" },
-          { value: "Chennai", label: "Based in" },
+          { value: "Coimbatore", label: "Based in" },
           { value: "2hrs", label: "Reply time" },
         ].map((s) => (
           <div key={s.label} className="border-r border-[#ddd4c2] py-4 text-center last:border-r-0">
@@ -173,7 +173,7 @@ export default async function HomePage() {
           Ready to transform your space?
         </h2>
         <p className="relative mb-8 text-xs tracking-wide text-[#8a7d6b]">
-          We work across Chennai - homes and commercial spaces
+          We work across Coimbatore - homes and commercial spaces
         </p>
         <div className="relative flex flex-wrap justify-center gap-4">
           <a

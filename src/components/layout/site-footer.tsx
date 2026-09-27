@@ -13,7 +13,7 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-[15px] font-light text-[#5b5043]">Kalai Suvadu</p>
           <p className="mt-1 text-[10px] text-[#8a7d6b]">கலைச் சுவடு</p>
-          <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8a7d6b]">Chennai</p>
+          <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8a7d6b]">Coimbatore</p>
         </div>
 
         <div>
