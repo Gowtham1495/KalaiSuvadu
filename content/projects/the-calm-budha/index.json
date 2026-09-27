@@ -1,12 +1,20 @@
 {
-  "title": "The Calm Budha",
+  "title": "The Peaceful Buddha",
+  "description": "This mural is about peacefulness. I painted a stylized Buddha head with closed eyes. Behind him are gold and blue shapes. At the bottom is a bright pink lotus flower, a symbol of beauty and calm. It’s a great first project working under Zaravi Team and place a main piece for my portfolio.",
   "category": "MURAL",
   "workType": "COLLABORATIVE",
   "status": "completed",
-  "coverImage": "https://res.cloudinary.com/y9jkfk2e/image/upload/ar_1:1,c_auto,g_auto/WhatsApp_Image_2026-08-16_at_14.23.39_hwxx9b.jpg",
+  "coverImage": "https://res.cloudinary.com/n0hh6fqe/image/upload/v1787549922/PXL_20260305_095735957.jpg",
   "isFeatured": false,
   "isCoverProject": true,
   "isPublished": true,
-  "media": [],
-  "teamMembers": []
+  "media": [
+    {
+      "type": "image",
+      "url": "https://res.cloudinary.com/n0hh6fqe/image/upload/v1787549994/PXL_20260305_100515792.jpg"
+    }
+  ],
+  "teamMembers": [
+    "thamizh-elakkiya"
+  ]
 }

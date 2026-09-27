@@ -1,12 +1,24 @@
 {
-  "title": "Traditional Women Portrait",
+  "title": "The Red Saree",
+  "description": "In this project, I painted a woman with a calm and confident look. The deep red color of her clothes catches your eye right away. I kept the background simple so you can easily focus on her face, the pretty flowers in her hair, and her elegant gold earrings.",
   "category": "MURAL",
   "workType": "SOLO",
   "status": "completed",
-  "coverImage": "https://res.cloudinary.com/y9jkfk2e/image/upload/ar_1:1,c_auto,g_auto/WhatsApp_Image_2026-08-16_at_14.10.17_gyiknf.jpg",
+  "coverImage": "https://res.cloudinary.com/n0hh6fqe/image/upload/v1786890320/PXL_20260223_121309271.MP.jpg",
   "isFeatured": false,
   "isCoverProject": true,
   "isPublished": true,
-  "media": [],
-  "teamMembers": []
+  "media": [
+    {
+      "type": "image",
+      "url": "https://res.cloudinary.com/n0hh6fqe/image/upload/v1786894308/IMG-20260224-WA0056.jpg"
+    },
+    {
+      "type": "instagram",
+      "url": "https://www.instagram.com/p/DbFRTr1kyu6/?igsi=NXdtMTdxam5zd2h6"
+    }
+  ],
+  "teamMembers": [
+    "thamizh-elakkiya"
+  ]
 }

@@ -1,12 +1,22 @@
 {
-  "title": "Radha Krishna",
+  "title": "Traditional Line Art",
+  "description": "This project features two large, detailed drawings on wall panels. I used clean black lines to create beautiful traditional Indian pictures, including Radha and Krishna and an elephant. The simple colors make the artwork stand out perfectly in an elegant room.",
   "category": "MURAL",
-  "workType": "SOLO",
+  "workType": "COLLABORATIVE",
   "status": "completed",
-  "coverImage": "https://res.cloudinary.com/y9jkfk2e/image/upload/ar_1:1,c_auto,g_auto/WhatsApp_Image_2026-08-16_at_14.26.35_wsxynx.jpg",
+  "coverImage": "https://res.cloudinary.com/n0hh6fqe/image/upload/v1787560634/IMG-20260330-WA0080.jpg",
   "isFeatured": true,
   "isCoverProject": false,
   "isPublished": true,
-  "media": [],
+  "media": [
+    {
+      "type": "image",
+      "url": "https://res.cloudinary.com/n0hh6fqe/image/upload/v1787560694/IMG-20260330-WA0058.jpg"
+    },
+    {
+      "type": "instagram",
+      "url": "https://www.instagram.com/reel/DcadJ7XTi1d/?igsi=MWl6eGpjb3gycm8zcw=="
+    }
+  ],
   "teamMembers": []
 }
