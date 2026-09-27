@@ -28,6 +28,11 @@ try {
     env: { ...process.env, NODE_ENV: "production" },
   });
 
+  const noJekyllPath = path.join(process.cwd(), "out", ".nojekyll");
+  fs.mkdirSync(path.dirname(noJekyllPath), { recursive: true });
+  fs.writeFileSync(noJekyllPath, "", { flag: "w" });
+  console.log("Created out/.nojekyll for GitHub Pages...");
+
 } finally {
   for (const entry of pathsToHide) {
     if (fs.existsSync(entry.temp)) {
