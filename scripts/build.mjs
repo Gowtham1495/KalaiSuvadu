@@ -2,13 +2,25 @@ import fs from "fs";
 import { execSync } from "child_process";
 import path from "path";
 
-const apiPath = path.join(process.cwd(), "src", "app", "api");
-const tempPath = path.join(process.cwd(), ".api-temp");
+const pathsToHide = [
+  {
+    original: path.join(process.cwd(), "src", "app", "api"),
+    temp: path.join(process.cwd(), ".api-temp"),
+    label: "src/app/api",
+  },
+  {
+    original: path.join(process.cwd(), "src", "app", "keystatic"),
+    temp: path.join(process.cwd(), ".keystatic-temp"),
+    label: "src/app/keystatic",
+  },
+];
 
 try {
-  if (fs.existsSync(apiPath)) {
-    console.log("Temporarily hiding src/app/api during static build...");
-    fs.renameSync(apiPath, tempPath);
+  for (const entry of pathsToHide) {
+    if (fs.existsSync(entry.original)) {
+      console.log(`Temporarily hiding ${entry.label} during static build...`);
+      fs.renameSync(entry.original, entry.temp);
+    }
   }
 
   execSync("next build", {
@@ -17,8 +29,10 @@ try {
   });
 
 } finally {
-  if (fs.existsSync(tempPath)) {
-    console.log("Restoring src/app/api...");
-    fs.renameSync(tempPath, apiPath);
+  for (const entry of pathsToHide) {
+    if (fs.existsSync(entry.temp)) {
+      console.log(`Restoring ${entry.label}...`);
+      fs.renameSync(entry.temp, entry.original);
+    }
   }
 }
